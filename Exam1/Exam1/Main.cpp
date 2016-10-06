@@ -6,6 +6,7 @@
 //and that any help I received adhered to the rules stated for this exam.
 
 #include <iostream>
+#include <string>
 #include "Movie.h"
 #include "Theater.h"
 using namespace std;
