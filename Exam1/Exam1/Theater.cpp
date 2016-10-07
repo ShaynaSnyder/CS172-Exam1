@@ -22,21 +22,28 @@ Theater::Theater(string name, string phone)
 //Adds a movie at a specific time
 void Theater::AddMovie(Movie& Movie)
 {
-	for (int i = 0; i < 11; i++)
-	{
 		titleA[i] = Movie.getTitle();
 		genreA[i] = Movie.getGenre();
 		showtimeA[i] = Movie.getShowtime();
-	}
+		i++;
 }
 //Returns movie shown at or after given hour
 string Theater::GetMovieForHour(int hour)
 {
-	for (int x = 0; x < 11; x++)
+	if (hour >= 0 && hour <= 23)
 	{
-		if (showtimeA[x] == hour)
-			return titleA[x];
+		for (int h = 0; h < 24; h++)
+		{
+			for (int x = 0; x < 11; x++)
+			{
+				if (showtimeA[x] == (hour + h))
+					return titleA[x];
+			}
+		}
 	}
+	else
+		return "";
+	
 }
 //Returns movie showtime given genre
 int Theater::GetShowTimeForGenre(string genre)
@@ -46,6 +53,7 @@ int Theater::GetShowTimeForGenre(string genre)
 		if (genreA[y]==genre)
 			return showtimeA[y];
 	}
+	return -1;
 }
 //Retruns price of popcorn
 int Theater::GetPopcornPrice()

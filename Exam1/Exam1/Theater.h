@@ -23,4 +23,5 @@ public: //declares functions as public methods
 	string titleA[11];
 	string genreA[11];
 	int showtimeA[11];
+	int i = 0;
 };
