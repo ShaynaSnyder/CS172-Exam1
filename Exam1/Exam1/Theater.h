@@ -20,6 +20,8 @@ public: //declares functions as public methods
 	int GetShowTimeForGenre(string genre); //Returns -1 if none exist
 	int GetPopcornPrice(); //Returns cost of popcorn
 	int GetCokePrice(); //Returns cost of coke
+	//declares string and int arrays of size 11
+	//to hold movie titles, genres, and showtimes
 	string titleA[11];
 	string genreA[11];
 	int showtimeA[11];
