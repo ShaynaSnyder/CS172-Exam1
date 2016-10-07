@@ -1,6 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include <string>
+using namespace std;
 
 //creates Movie class
 class Movie
@@ -15,4 +16,5 @@ public: //declares functions as public methods
 	string getTitle(); //Returns movie title
 	string getGenre(); //Returns movie genre
 	int getShowtime(); //Returns movie show time
+
 };
